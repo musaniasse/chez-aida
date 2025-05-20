@@ -1,6 +1,6 @@
-package com.edaara.edaaraservice.repository;
+package com.chezaida.chezaidaservice.repository;
 
-import com.edaara.edaaraservice.entity.Room;
+import com.chezaida.chezaidaservice.entity.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

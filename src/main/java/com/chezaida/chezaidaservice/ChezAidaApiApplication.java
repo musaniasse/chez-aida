@@ -1,13 +1,13 @@
-package com.edaara.edaaraservice;
+package com.chezaida.chezaidaservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EdaaraApiApplication {
+public class ChezAidaApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EdaaraApiApplication.class, args);
+		SpringApplication.run(ChezAidaApiApplication.class, args);
 	}
 
 }

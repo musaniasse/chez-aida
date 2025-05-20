@@ -1,4 +1,4 @@
-package com.edaara.edaaraservice.entity;
+package com.chezaida.chezaidaservice.entity;
 
 
 import jakarta.persistence.*;

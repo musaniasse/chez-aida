@@ -1,6 +1,6 @@
-package com.edaara.edaaraservice.repository;
+package com.chezaida.chezaidaservice.repository;
 
-import com.edaara.edaaraservice.entity.Booking;
+import com.chezaida.chezaidaservice.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
