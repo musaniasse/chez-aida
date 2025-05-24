@@ -1,4 +1,4 @@
-package com.chezaida.chezaidaservice.security;
+package com.chezaida.chezaidaservice.configuration;
 
 
 import com.chezaida.chezaidaservice.service.CustomUserDetailsService;

@@ -1,4 +1,4 @@
-package com.chezaida.chezaidaservice.security;
+package com.chezaida.chezaidaservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,9 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
-                        .allowedOrigins("*");
+                        .allowedOrigins("http://localhost:8082")
+                        .allowedOrigins("http://localhost:4200")
+                ;
             }
         };
     }

@@ -15,18 +15,18 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping("/all")
+    @GetMapping("/")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> getAllUsers(){
         Response response = userService.getAllUsers();
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
-    @GetMapping("/get-by-id/{userId}")
+    @GetMapping("/{userId}")
     public ResponseEntity<Response> getUserById(@PathVariable("userId") String userId){
         Response response = userService.getUserById(userId);
         return ResponseEntity.status(response.getStatusCode()).body(response);
     }
-    @DeleteMapping("/delete/{userId}")
+    @DeleteMapping("/{userId}")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> deleteUser(@PathVariable("userId") String userId){
         Response response = userService.deleteUser(userId);

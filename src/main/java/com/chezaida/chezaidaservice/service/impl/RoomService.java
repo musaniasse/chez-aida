@@ -6,7 +6,7 @@ import com.chezaida.chezaidaservice.entity.Room;
 import com.chezaida.chezaidaservice.exception.OurException;
 import com.chezaida.chezaidaservice.repository.BookingRepository;
 import com.chezaida.chezaidaservice.repository.RoomRepository;
-import com.chezaida.chezaidaservice.service.AwsS3Service;
+//import com.chezaida.chezaidaservice.service.AwsS3Service;
 import com.chezaida.chezaidaservice.service.interfac.IRoomService;
 import com.chezaida.chezaidaservice.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +25,8 @@ public class RoomService implements IRoomService {
     private RoomRepository roomRepository;
     @Autowired
     private BookingRepository bookingRepository;
-    @Autowired
-    private AwsS3Service awsS3Service;
+   /* @Autowired
+    private AwsS3Service awsS3Service;*/
 
 
     @Override
@@ -35,10 +35,10 @@ public class RoomService implements IRoomService {
 
         try {
 
-            String imageUrl = awsS3Service.saveImageToS3(photo);
+            //String imageUrl = awsS3Service.saveImageToS3(photo);
             Room room = new Room();
 
-            room.setRoomPhotoUrl(imageUrl);
+            room.setRoomPhotoUrl(null);
             room.setRoomType(roomType);
             room.setRoomPrice(roomPrice);
             room.setRoomDescription(description);
@@ -115,14 +115,14 @@ public class RoomService implements IRoomService {
             String imageUrl = null;
 
             if (photo != null && !photo.isEmpty()){
-                imageUrl = awsS3Service.saveImageToS3(photo);
+                //imageUrl = awsS3Service.saveImageToS3(photo);
             }
 
             Room room = roomRepository.findById(roomId).orElseThrow(()-> new OurException("Room Not Found"));
             if(roomType != null) room.setRoomType(roomType);
             if (roomPrice != null) room.setRoomPrice(roomPrice);
             if (description != null) room.setRoomDescription(description);
-            if (imageUrl != null) room.setRoomPhotoUrl(imageUrl);
+            if (imageUrl != null) room.setRoomPhotoUrl(null);
 
             Room updatedRoom = roomRepository.save(room);
             RoomDTO roomDTO = Utils.mapRoomEntityToRoomDTO(updatedRoom);

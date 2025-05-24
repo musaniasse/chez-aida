@@ -1,3 +1,4 @@
+/*
 package com.chezaida.chezaidaservice.service;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
@@ -17,7 +18,7 @@ import java.io.InputStream;
 @Service
 public class AwsS3Service {
 
-    private final String bucketName = "phegon-hotel-bucket-images";
+    private final String bucketName = "chezaida-auberge-images";
 
     @Value("${aws.s3.access.key}")
     private String awsS3AccessKey;
@@ -54,3 +55,4 @@ public class AwsS3Service {
     }
 
 }
+*/

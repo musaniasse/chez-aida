@@ -14,9 +14,10 @@ import com.chezaida.chezaidaservice.service.interfac.IRoomService;
 import com.chezaida.chezaidaservice.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class BookingService implements IBookingService {
     @Autowired
     private BookingRepository bookingRepository;
